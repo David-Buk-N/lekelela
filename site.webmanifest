@@ -1,0 +1,17 @@
+{
+  "name": "Lekelela Creative Hub",
+  "short_name": "Lekelela",
+  "description": "South African web & graphic design freelance agency.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#160b29",
+  "theme_color": "#4a2382",
+  "icons": [
+    {
+      "src": "static/assets/LEKE.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

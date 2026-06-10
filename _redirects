@@ -1,0 +1,4 @@
+# Netlify & Cloudflare Pages redirect rules
+# Canonicalize the .html homepage to the clean root URL.
+# The trailing "!" forces the redirect even though index.html exists.
+/index.html    /    301!
