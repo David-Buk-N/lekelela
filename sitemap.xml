@@ -2,22 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lekelela.co.za/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://lekelela.co.za/#services</loc>
+    <loc>https://lekelela.co.za/#how</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://lekelela.co.za/#portfolio</loc>
+    <loc>https://lekelela.co.za/#features</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://lekelela.co.za/#contact</loc>
+    <loc>https://lekelela.co.za/#jobs</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lekelela.co.za/#faq</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>

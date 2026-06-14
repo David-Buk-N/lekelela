@@ -1,7 +1,7 @@
 {
-  "name": "Lekelela Creative Hub",
+  "name": "Lekelela — CV Generator",
   "short_name": "Lekelela",
-  "description": "South African web & graphic design freelance agency.",
+  "description": "Generate a tailored, professional CV and get matched with jobs that fit you.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#160b29",
