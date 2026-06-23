@@ -29,13 +29,18 @@ window.addEventListener('DOMContentLoaded', event => {
     // Shrink the navbar when page is scrolled
     document.addEventListener('scroll', navbarShrink);
 
-    // Activate Bootstrap scrollspy on the main nav element
+    // Activate Bootstrap scrollspy on the main nav element.
+    // Only on pages whose nav has same-page anchor links (the homepage); on
+    // subpages the nav points to other pages, which would break ScrollSpy.
     const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#mainNav',
-            rootMargin: '0px 0px -40%',
-        });
+    const hasInPageAnchors = mainNav && mainNav.querySelector('a.nav-link[href^="#"]:not([href="#"])');
+    if (hasInPageAnchors) {
+        try {
+            new bootstrap.ScrollSpy(document.body, {
+                target: '#mainNav',
+                rootMargin: '0px 0px -40%',
+            });
+        } catch (e) { /* no in-page targets — safe to ignore */ }
     };
 
     // Collapse responsive navbar when toggler is visible

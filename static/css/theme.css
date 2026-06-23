@@ -647,9 +647,154 @@ header.masthead .container { position: relative; z-index: 1; }
   margin-top: 3rem;
   padding-top: 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  align-items: center;
+  justify-content: space-between;
   color: rgba(255, 255, 255, 0.55);
 }
+.footer-bottom-links { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+.footer-bottom-links a {
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  transition: color 0.2s var(--ease-apple);
+}
+.footer-bottom-links a:hover { color: var(--brand-300); }
+@media (max-width: 575.98px) { .footer-bottom { justify-content: center; text-align: center; } }
+
+/* ------------------------------------------------------------------ */
+/* Subpages: compact hero                                              */
+/* ------------------------------------------------------------------ */
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  padding: 10rem 0 5rem;
+  background: radial-gradient(120% 130% at 50% 0%, #2e1a4f 0%, #1c1033 55%, #0e0720 100%);
+}
+@media (min-width: 992px) { .page-hero { padding: 12rem 0 6rem; } }
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(40vw 30vw at 75% -10%, rgba(124, 58, 237, 0.45), transparent 70%);
+  pointer-events: none;
+}
+.page-hero .container { position: relative; z-index: 1; }
+.page-hero .section-eyebrow { color: var(--brand-300); }
+.page-hero .section-title { color: #fff; }
+.page-hero .section-lead { color: rgba(255, 255, 255, 0.78); margin-left: auto; margin-right: auto; margin-bottom: 0; }
+
+/* ------------------------------------------------------------------ */
+/* Pricing                                                             */
+/* ------------------------------------------------------------------ */
+.section-pricing { background: var(--surface-2); }
+.pricing-grid { row-gap: 1.75rem; align-items: stretch; }
+.billing-note { color: var(--muted); font-size: 0.95rem; margin-top: 1rem; }
+
+.price-card {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 2.4rem 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.45s var(--ease-apple), box-shadow 0.45s var(--ease-apple), border-color 0.45s var(--ease-apple);
+}
+.price-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(124, 58, 237, 0.25);
+}
+.price-card--featured {
+  background: var(--grad-brand);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: var(--shadow-lg);
+}
+.price-badge {
+  position: absolute;
+  top: -0.9rem; left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-600);
+  background: #fff;
+  border-radius: 100px;
+  padding: 0.35rem 0.9rem;
+  box-shadow: var(--shadow-md);
+}
+.price-name { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 0.4rem; }
+.price-amount { font-size: clamp(2.4rem, 5vw, 3rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
+.price-currency { font-size: 1.4rem; font-weight: 700; vertical-align: top; margin-right: 0.1rem; }
+.price-period { font-size: 0.95rem; font-weight: 500; color: var(--muted); }
+.price-card--featured .price-period { color: rgba(255, 255, 255, 0.75); }
+.price-desc { margin: 1rem 0 1.5rem; color: var(--muted); line-height: 1.6; }
+.price-card--featured .price-desc { color: rgba(255, 255, 255, 0.85); }
+.price-features { list-style: none; padding: 0; margin: 0 0 1.75rem; flex: 1 1 auto; }
+.price-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.4rem 0;
+  color: var(--ink);
+  font-size: 0.95rem;
+}
+.price-features i { color: var(--brand-500); font-size: 1.05rem; line-height: 1.4; }
+.price-features li.muted { color: var(--muted); }
+.price-features li.muted i { color: var(--muted); }
+.price-card--featured .price-features li { color: #fff; }
+.price-card--featured .price-features i { color: #fff; }
+.price-card .btn { width: 100%; }
+.price-card--featured .btn-primary { background: #fff; color: var(--brand-600); }
+.price-card--featured .btn-primary:hover { background: rgba(255, 255, 255, 0.9) !important; color: var(--brand); }
+
+/* ------------------------------------------------------------------ */
+/* Legal / policy content                                              */
+/* ------------------------------------------------------------------ */
+.section-legal { background: var(--surface); }
+.legal-wrap { max-width: 52rem; margin: 0 auto; }
+.legal-updated {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--line);
+}
+.legal-toc {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 3rem;
+}
+.legal-toc h2 { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brand-600); margin-bottom: 1rem; }
+.legal-toc ol { margin: 0; padding-left: 1.2rem; color: var(--muted); }
+.legal-toc li { margin-bottom: 0.5rem; }
+.legal-toc a { color: var(--brand-600); text-decoration: none; font-weight: 500; }
+.legal-toc a:hover { text-decoration: underline; }
+
+.legal-block { padding-top: 1.5rem; margin-top: 2.5rem; scroll-margin-top: 6rem; }
+.legal-block:first-of-type { margin-top: 0; }
+.legal-block h2 {
+  font-size: 1.5rem;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+.legal-block h2 .legal-num { color: var(--brand-500); margin-right: 0.5rem; }
+.legal-block h3 { font-size: 1.1rem; font-weight: 700; color: var(--ink); margin: 1.5rem 0 0.6rem; }
+.legal-block p { color: var(--muted); line-height: 1.75; margin-bottom: 1rem; }
+.legal-block ul { color: var(--muted); line-height: 1.75; padding-left: 1.2rem; margin-bottom: 1rem; }
+.legal-block li { margin-bottom: 0.5rem; }
+.legal-block a { color: var(--brand-600); }
 
 /* ------------------------------------------------------------------ */
 /* Scroll-reveal motion (Apple-style)                                  */
